@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>C2C Portal - College to Career Internship Platform</title>
+  
+  <script>
+    (() => {
+      try {
+        const ls = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const shouldDark = ls ? ls === 'dark' : prefersDark;
+        const root = document.documentElement;
+        if (shouldDark) root.classList.add('dark'); else root.classList.remove('dark');
+      } catch (_) { }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
